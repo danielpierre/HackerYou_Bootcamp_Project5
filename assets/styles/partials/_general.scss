@@ -1,0 +1,223 @@
+.user-input {
+	height: 100vh;
+	background-image: 
+	  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+	  url(../images/concert-hero.jpg);
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	position: relative;
+
+	.wrapper {
+		margin: auto;
+	}	
+
+	h1 {
+		font-family: $headingFont;
+		font-size: 75px;
+		margin: 0;
+		color: #fff;
+	}
+
+	.tagline {
+		font-size: 1.1rem;
+		margin-top: 0;
+		color: #fff;
+	}
+
+	form {
+		margin-bottom: 15px;
+		.input-group {
+			display: flex;
+		}
+	}
+
+	#locationSelectionForm {
+		display: none; // hide initially
+	}
+
+	label {	
+		display: block;
+		width: 100%;
+		margin-bottom: 3px;
+		font-size: 15px;
+		color: #fff;
+		white-space: nowrap;
+	}
+
+	input[name="locationSearchTerm"],
+	select[name=locationOptions] {
+		width: 80%;	
+		border: 0;
+		padding: 6px;
+		border-radius: 3px 0 0 3px;
+	}
+
+	input[type=search] {
+		-webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box; 
+		         box-sizing: border-box;
+	}
+
+	select[name=locationOptions] {
+		overflow: hidden;
+	}
+
+	input[type=submit] {
+		width: 20%;
+		border: 0;
+		border-radius: 0 3px 3px 0;
+		background-color: $dodgerBlue;
+		color: #fff;
+		text-transform: uppercase;
+
+		&:hover {
+			background-color: lighten($dodgerBlue, 10);
+		}
+	}		
+
+	footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 0 5px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;		
+
+		.author {
+			color: #fff;
+			text-decoration: none;
+			transition: color 0.2s;
+
+			i {
+				margin-right: 5px;
+			}
+
+			&:hover {
+				color: lighten($dodgerBlue, 10);
+			}
+		}
+
+		.attribution-container {
+			width: 125px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.songkick-attribution {
+			// songkick logo 85x30
+			display: block;
+			height: 30px;
+			width: 85px;
+			background-image: url(../images/songkick-attribution-assets/powered-by-sk/powered-by-songkick-pink.svg);
+			background-size: cover;
+			transition: filter 0.2s;
+
+			&:hover {
+				filter: brightness(80%);
+			}
+		}
+
+		.zomato-attribution {
+			// zomato bg 30x30
+			height: 30px;
+			width: 30px;		
+			border-radius: 3px;
+			background-color: #CB202D;
+			display: flex;
+			transition: filter 0.2s;
+
+			&:hover {
+				filter: brightness(125%);
+			}
+		}
+
+		.zomato-logo {
+			// zomato logo 38x9
+			height: 7px;
+			width: 38px;
+			background-image: url(../images/zomato-text-logo.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin: auto;
+		}
+	}
+}
+
+.event-listings-container {
+	display: none; // hide initially
+
+	#event-listings {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+		li {
+			border-top: 1px solid rgba(255, 255, 255, 0.5);
+			padding: 9px 0;
+			color: #fff;
+
+			&:nth-child(5n),
+			&:last-child {
+				border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+			}
+
+			&:hover {
+				cursor: pointer;
+				background-color: rgba(0, 0, 0, 0.65);
+			}
+
+			h3 {
+				margin: 0 0 6px;
+				font-size: 18px;
+			}
+
+			h4 {
+				margin: 6px 0 6px;
+				font-size: 15px;
+			}
+
+			h5 {
+				margin: 6px 0 0;
+				font-size: 14px;
+				font-weight: normal;
+			}			
+		}
+	}	
+
+	.event-count-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	#eventCount {		
+		margin-bottom: 3px;
+		margin-right: 6px;
+		font-size: 15px;
+		color: #fff;
+		white-space: nowrap;
+	}
+
+	.restart-btn {
+		width: 20%;
+		border: 0;
+		border-radius: 2px;
+		padding: 6px;
+		background-color: $dodgerBlue;
+		color: #fff;
+		text-transform: uppercase;
+		transition: background-color 0.2s;
+
+		&:hover {
+			background-color: lighten($dodgerBlue, 10);
+		}
+	}
+
+	label {	
+		margin-bottom: 3px;		
+	}
+}

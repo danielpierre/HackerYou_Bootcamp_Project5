@@ -1,0 +1,698 @@
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201C \201D \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, figure {
+  margin: 0;
+}
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* Clearfix */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* Border-box box-sizing */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.user-input {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/concert-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.user-input .wrapper {
+  margin: auto;
+}
+
+.user-input h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 75px;
+  margin: 0;
+  color: #fff;
+}
+
+.user-input .tagline {
+  font-size: 1.1rem;
+  margin-top: 0;
+  color: #fff;
+}
+
+.user-input form {
+  margin-bottom: 15px;
+}
+
+.user-input form .input-group {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-input #locationSelectionForm {
+  display: none;
+}
+
+.user-input label {
+  display: block;
+  width: 100%;
+  margin-bottom: 3px;
+  font-size: 15px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.user-input input[name="locationSearchTerm"],
+.user-input select[name=locationOptions] {
+  width: 80%;
+  border: 0;
+  padding: 6px;
+  border-radius: 3px 0 0 3px;
+}
+
+.user-input input[type=search] {
+  box-sizing: border-box;
+}
+
+.user-input select[name=locationOptions] {
+  overflow: hidden;
+}
+
+.user-input input[type=submit] {
+  width: 20%;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  background-color: #1e90ff;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.user-input input[type=submit]:hover {
+  background-color: #51a9ff;
+}
+
+.user-input footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 5px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-input footer .author {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.user-input footer .author i {
+  margin-right: 5px;
+}
+
+.user-input footer .author:hover {
+  color: #51a9ff;
+}
+
+.user-input footer .attribution-container {
+  width: 125px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-input footer .songkick-attribution {
+  display: block;
+  height: 30px;
+  width: 85px;
+  background-image: url(../images/songkick-attribution-assets/powered-by-sk/powered-by-songkick-pink.svg);
+  background-size: cover;
+  transition: -webkit-filter 0.2s;
+  transition: filter 0.2s;
+  transition: filter 0.2s, -webkit-filter 0.2s;
+}
+
+.user-input footer .songkick-attribution:hover {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.user-input footer .zomato-attribution {
+  height: 30px;
+  width: 30px;
+  border-radius: 3px;
+  background-color: #CB202D;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  transition: -webkit-filter 0.2s;
+  transition: filter 0.2s;
+  transition: filter 0.2s, -webkit-filter 0.2s;
+}
+
+.user-input footer .zomato-attribution:hover {
+  -webkit-filter: brightness(125%);
+          filter: brightness(125%);
+}
+
+.user-input footer .zomato-logo {
+  height: 7px;
+  width: 38px;
+  background-image: url(../images/zomato-text-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+}
+
+.event-listings-container {
+  display: none;
+}
+
+.event-listings-container #event-listings {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.event-listings-container #event-listings li {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 9px 0;
+  color: #fff;
+}
+
+.event-listings-container #event-listings li:nth-child(5n), .event-listings-container #event-listings li:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.event-listings-container #event-listings li:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.event-listings-container #event-listings li h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.event-listings-container #event-listings li h4 {
+  margin: 6px 0 6px;
+  font-size: 15px;
+}
+
+.event-listings-container #event-listings li h5 {
+  margin: 6px 0 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.event-listings-container .event-count-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.event-listings-container #eventCount {
+  margin-bottom: 3px;
+  margin-right: 6px;
+  font-size: 15px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.event-listings-container .restart-btn {
+  width: 20%;
+  border: 0;
+  border-radius: 2px;
+  padding: 6px;
+  background-color: #1e90ff;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+}
+
+.event-listings-container .restart-btn:hover {
+  background-color: #51a9ff;
+}
+
+.event-listings-container label {
+  margin-bottom: 3px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #222d3d;
+}
+
+/* Leaflet */
+.search-results {
+  height: 100vh;
+  display: none;
+}
+
+#results-map {
+  height: 100%;
+}
+
+.leaflet-container img.popup-img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+}
+
+.leaflet-container img.popup-img:hover {
+  opacity: 0.8;
+}
+
+.leaflet-container img.popup-sk-img {
+  display: block;
+  width: 70px;
+  transition: opacity 0.2s;
+}
+
+.leaflet-container img.popup-sk-img:hover {
+  opacity: 0.8;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 4px;
+}
+
+button.leaflet-reset-button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.leaflet-reset-button {
+  display: inline-block;
+  border: solid #1e90ff 4px;
+  border-radius: 3px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+  padding: 3px 6px;
+  background-color: #1e90ff;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.leaflet-reset-button:hover {
+  border-color: #51a9ff;
+  background-color: #51a9ff;
+}
+
+.popup-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.popup-container a, .popup-container p, .popup-container h2 {
+  margin: 0;
+}
+
+.popup-container h2 {
+  font-size: 16px;
+}
+
+.popup-container .fa.fa-location-arrow,
+.popup-container .fa.fa-star,
+.popup-container .fa.fa-cutlery {
+  color: #888;
+  margin-right: 3px;
+}
+
+.popup-container .popup-image-container {
+  margin-right: 10px;
+}
+
+.popup-info {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popup-info div {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup-info .cuisine {
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.popup-info .date {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.popup-info .artist-icon {
+  height: 25px;
+}
+
+.popup-info .distance,
+.popup-info .rating {
+  margin-right: 9px;
+}
+
+.popup-info .popup-link {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.popup-info .popup-link img {
+  display: block;
+  transition: -webkit-filter 0.2s;
+  transition: filter 0.2s;
+  transition: filter 0.2s, -webkit-filter 0.2s;
+}
+
+.popup-info .popup-link img:hover {
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
+}
+
+.popup-info .popup-link .fa.fa-cutlery {
+  transition: color 0.2s;
+}
+
+.popup-info .popup-link:hover,
+.popup-info .popup-link:hover .fa.fa-cutlery {
+  color: #000;
+}
+
+/* API Attribution */
+.leaflet-control.attribution-container {
+  width: 125px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.leaflet-control.attribution-container:hover {
+  cursor: pointer;
+}
+
+.leaflet-control.attribution-container .songkick-attribution {
+  background-image: url(../images/songkick-attribution-assets/powered-by-sk/powered-by-songkick-pink.svg);
+  background-size: cover;
+  transition: -webkit-filter 0.2s;
+  transition: filter 0.2s;
+  transition: filter 0.2s, -webkit-filter 0.2s;
+}
+
+.leaflet-control.attribution-container .songkick-attribution:hover {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.leaflet-control.attribution-container .zomato-attribution {
+  border-radius: 3px;
+  background-color: #CB202D;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  transition: -webkit-filter 0.2s;
+  transition: filter 0.2s;
+  transition: filter 0.2s, -webkit-filter 0.2s;
+}
+
+.leaflet-control.attribution-container .zomato-attribution:hover {
+  -webkit-filter: brightness(125%);
+          filter: brightness(125%);
+}
+
+.leaflet-control.attribution-container .zomato-logo {
+  background-image: url(../images/zomato-text-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+}
+
+/* Paginathing Plugin Controls */
+.pagination-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination {
+  display: inline-block;
+  margin: 20px 0;
+  padding-left: 0;
+  border-radius: 4px;
+}
+
+.pagination li {
+  display: inline;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  margin-left: -1px;
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #1e90ff;
+  line-height: 1.42857143;
+  text-decoration: none;
+}
+
+.pagination > .page > a:hover,
+.pagination > .first > a:hover,
+.pagination > .prev > a:hover,
+.pagination > .next > a:hover,
+.pagination > .last > a:hover {
+  border-color: #1e90ff;
+  background-color: #1e90ff;
+  color: #fff;
+  cursor: default;
+}
+
+.pagination > .disabled > a,
+.pagination > .disabled > a:focus,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > span,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > span:hover {
+  background-color: #ddd;
+  color: #777;
+  cursor: not-allowed;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+  z-index: 3;
+  background-color: #1e90ff;
+  border-color: #1e90ff;
+  color: #fff;
+  cursor: default;
+}
+
+.pagination > .page:not(.active) {
+  display: none;
+}

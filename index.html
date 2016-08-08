@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="Concert, Concerts, Live Music, Restaurant, Restaurants, Dining, Eatery, Eateries, Eating Establishment, Food, Drink, Venue, Live Show, Live, Show, Entertainment">
+	<meta name="description" content="Find Eating Establishments Near Your Concert">
+	<meta name="author" content="Daniel Pierre">
+	<meta property="og:title" content="Sounds Delish">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://www.soundsdelish.ca">
+	<meta property="og:image" content="http://www.soundsdelish.ca/assets/images/site-preview.jpg">
+	<meta property="og:site_name" content="Sounds Delish">
+	<meta property="og:description" content="Find Eating Establishments Near Your Concert">
+	<title>Sounds Delish</title>
+	<link rel="icon" type="image/svg" href="assets/images/concert-marker-black.svg">
+	<!-- STYLESHEETS -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:400,700" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/styles/leaflet.css">
+	<link rel="stylesheet" href="assets/styles/main.css">
+	<!-- SCRIPTS -->
+	<!-- <script src="https://use.fontawesome.com/2f59fa4e0f.js"></script>	 -->
+</head>
+<body>
+	<main>
+		<section class="user-input">
+			<div class="wrapper">
+				<h1>Sounds Delish!</h1>
+				<p class="tagline">Serving you the perfect resto options to get your show on.</p>
+				<form action="" id="locationSearchForm">
+					<label for="locationSearchTerm">Enter a city name to begin</label>
+					<div class="input-group">
+						<input type="search" name="locationSearchTerm" id="locationSearchTerm" required>
+						<input type="submit" value="Search">
+					</div><!-- /.input-group -->
+				</form><!-- /#locationSearchForm -->
+
+				<form action="" id="locationSelectionForm">
+					<label for="locationOptions"></label>
+					<div class="input-group">
+						<select name="locationOptions" id="locationOptions"></select><!-- fill this with location search results -->
+						<input type="submit" value="Select">
+					</div><!-- /.input-group -->
+				</form><!-- /#locationSelectionForm -->
+
+				<div class="event-listings-container">
+					<div class="event-count-container">
+						<span id="eventCount"></span><!-- /#eventCount -->
+					</div><!-- /.event-count-container -->
+					<ul id="event-listings"></ul><!-- /#event-listings -->
+				</div><!-- /.event-listings-container -->
+			</div><!-- /.wrapper -->
+
+			<footer>
+				<div class="attribution-container">
+					<a class="songkick-attribution" href="http://www.songkick.com" target="_blank"></a>
+					<a class="zomato-attribution" href="https://www.zomato.com" target="_blank">
+						<div class="zomato-logo"></div>
+					</a><!-- /.zomato-attribution -->
+				</div><!-- /.attribution-container -->
+				<a class="author" href="http://danielpierre.io" target="_blank"><i class="fa fa-pencil" aria-hidden="true"></i>created by Daniel Pierre</a>
+			</footer>
+		</section><!-- /.user-input -->
+
+		<section class="search-results">
+			<div id="results-map"></div><!-- #results-map -->
+		</section><!-- /.search-results -->
+	</main>		
+
+	<!-- SCRIPTS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+	<script src="assets/scripts/paginathing.js"></script>
+	<script src="assets/scripts/leaflet.js"></script>
+	<script src="assets/scripts/app.js"></script>	
+</body>
+</html>

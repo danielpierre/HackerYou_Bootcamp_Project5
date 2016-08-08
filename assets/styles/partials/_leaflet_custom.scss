@@ -1,0 +1,180 @@
+/* Leaflet */
+
+// Map container elements
+.search-results {
+	height: 100vh;
+	display: none;
+}
+
+#results-map { 
+	height: 100%;
+}
+
+.leaflet-container img.popup-img {
+	display: block;
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 4px;
+	transition: opacity 0.2s;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.leaflet-container img.popup-sk-img {
+	display: block;
+	width: 70px;
+	transition: opacity 0.2s;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.leaflet-popup-content-wrapper {
+	border-radius: 4px;
+}
+
+// Override Firefox additional padding and border
+button.leaflet-reset-button::-moz-focus-inner{
+	border: 0;
+	padding: 0;
+}
+
+// Button control
+.leaflet-reset-button {
+	display: inline-block;
+	border: solid $dodgerBlue 4px;
+	border-radius: 3px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+	padding: 3px 6px;
+	background-color: $dodgerBlue;	
+	color: #fff;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 0.2s;
+
+	&:hover {
+		border-color: lighten($dodgerBlue, 10);
+		background-color: lighten($dodgerBlue, 10);
+	}
+}
+
+// Popup contents
+.popup-container {
+	display: flex;
+	a, p, h2 {
+		margin: 0;
+	}
+
+	h2 {
+		font-size: 16px;
+	}
+
+	.fa.fa-location-arrow,
+	.fa.fa-star,
+	.fa.fa-cutlery {
+		color: #888;
+		margin-right: 3px;
+	}
+
+	.popup-image-container {
+		margin-right: 10px;
+	}
+}
+
+.popup-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	div {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.cuisine {
+		font-style: italic;
+		margin-bottom: 5px;
+	}
+
+	.date {
+		margin-top: 5px;
+		font-style: italic;
+	}
+
+	.artist-icon {
+		height: 25px;
+	}
+
+	.distance,
+	.rating {
+		margin-right: 9px;
+	}
+
+	.popup-link {
+		color: #333;
+		text-decoration: none;
+		transition: color 0.2s;
+
+		img {
+			display: block;
+			transition: filter 0.2s;
+
+			&:hover {
+				filter: brightness(0);
+			}
+		}
+
+		.fa.fa-cutlery {
+			transition: color 0.2s;
+		}
+	}
+
+	.popup-link:hover,
+	.popup-link:hover .fa.fa-cutlery {
+		color: #000;
+	}
+}
+
+/* API Attribution */
+.leaflet-control.attribution-container {
+	width: 125px;
+	display: flex;
+	justify-content: space-between;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	.songkick-attribution {
+		background-image: url(../images/songkick-attribution-assets/powered-by-sk/powered-by-songkick-pink.svg);
+		background-size: cover;
+		transition: filter 0.2s;
+
+		&:hover {
+			filter: brightness(80%);
+		}
+	}
+
+	.zomato-attribution {
+		border-radius: 3px;
+		background-color: #CB202D;
+		display: flex;
+		transition: filter 0.2s;
+
+		&:hover {
+			filter: brightness(125%);
+		}
+	}
+
+	.zomato-logo {
+		background-image: url(../images/zomato-text-logo.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin: auto;
+	}
+}
